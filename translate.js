@@ -1,11 +1,15 @@
 document.getElementById("submit").addEventListener("click", translate);
 
-message = (function( ) {
+function translate ( ) {
+  var text = document.getElementsById("translatedText");
   if(document.getElementById('spanish').checked) {
-    message.translateToSpanish();
+    text.innerHTML = message.translateToSpanish();
+    console.log("success")
   }else if(document.getElementById('french').checked) {
-    message.translateToFrench();
+    text.innerHTML = message.translateToFrench();
+    console.log("yay")
   }else {
-    message.translateToSwedish();
+    text.innerHTML = message.translateToSwedish();
+    console.log("woo hoo")
   }
-})(message);
+}

@@ -1,4 +1,3 @@
-
 message = (function(swedishMessage) {
   var swedishLexicon = {
       "merry":"god",

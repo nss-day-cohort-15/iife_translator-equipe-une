@@ -1,11 +1,11 @@
-message = (function(spanisMessage) {
+message = (function(spanishMessage) {
   var spanishLexicon = {
-      "merry":"god",
-      "christmas":"jul",
-      "and":"och",
-      "happy":"gott",
-      "new":"nytt",
-      "year":"år"
+      "merry":"feliz",
+      "christmas":"Navidad",
+      "and":"y",
+      "happy":"feliz",
+      "new":"nuevo",
+      "year":"año"
     }
   var userMessage = document.getElementById("translateText").value.toLowerCase();
   var messageArray = userMessage.split(' ');
