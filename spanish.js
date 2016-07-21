@@ -1,5 +1,6 @@
 message = (function(spanishMessage) {
   var spanishLexicon = {
+      "hello":"hola",
       "merry":"feliz",
       "christmas":"Navidad",
       "and":"y",

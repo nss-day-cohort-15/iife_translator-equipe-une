@@ -1,5 +1,6 @@
 message = (function(swedishMessage) {
   var swedishLexicon = {
+      "hello":"Hallå",
       "merry":"god",
       "christmas":"jul",
       "and":"och",

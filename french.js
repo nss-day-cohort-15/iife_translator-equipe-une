@@ -1,5 +1,6 @@
 var message = (function( ) {
   var frenchLexicon = {
+      "hello":"Bonjour",
       "merry":"joyeux",
       "christmas":"Noël",
       "and":"et",

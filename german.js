@@ -1,5 +1,6 @@
 message = (function(germanMessage) {
   var germanLexicon = {
+      "hello":"hallo",
       "merry":"fröhlich",
       "christmas":"Weihnachten",
       "and":"und",
