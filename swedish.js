@@ -7,9 +7,11 @@ message = (function(swedishMessage) {
       "new":"nytt",
       "year":"år"
     }
-  var userMessage = document.getElementById("translateText").value.toLowerCase();
-  var messageArray = userMessage.split(' ');
+
   swedishMessage.translateToSwedish = function(userMessage){
+    var userMessage = document.getElementById("translateText").value.toLowerCase();
+    var messageArray = userMessage.split(' ');
+
     for(var i=0; i<messageArray.length; i++) {
        for(var english in swedishLexicon) {
         if (messageArray[i] === english) {
@@ -17,9 +19,10 @@ message = (function(swedishMessage) {
         }
       }
     }
+    return messageArray.join(" ");
   }
 
-  return swedishMessage;
+ return swedishMessage;
 
 })(message);
 

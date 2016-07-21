@@ -7,9 +7,11 @@ message = (function(spanishMessage) {
       "new":"nuevo",
       "year":"año"
     }
-  var userMessage = document.getElementById("translateText").value.toLowerCase();
-  var messageArray = userMessage.split(' ');
+
   spanishMessage.translateToSpanish = function(userMessage){
+    var userMessage = document.getElementById("translateText").value.toLowerCase();
+    var messageArray = userMessage.split(' ');
+
     for(var i=0; i<messageArray.length; i++) {
        for(var english in spanishLexicon) {
         if (messageArray[i] === english) {
@@ -17,10 +19,11 @@ message = (function(spanishMessage) {
         }
       }
     }
+    return messageArray.join(" ");
   }
 
   return spanishMessage;
-
+  
 })(message);
 
 

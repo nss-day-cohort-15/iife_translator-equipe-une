@@ -1,7 +1,6 @@
-document.getElementById("submit").addEventListener("click", translate);
-
-function translate ( ) {
-  var text = document.getElementsById("translatedText");
+document.getElementById("submit").addEventListener("click", function(evt) {
+  evt.preventDefault();
+  var text = document.getElementById("translatedText");
   if(document.getElementById('spanish').checked) {
     text.innerHTML = message.translateToSpanish();
     console.log("success")
@@ -12,4 +11,4 @@ function translate ( ) {
     text.innerHTML = message.translateToSwedish();
     console.log("woo hoo")
   }
-}
+});

@@ -7,11 +7,12 @@ var message = (function( ) {
       "new":"nouveau",
       "year":"an"
     }
-  var userMessage = document.getElementById("translateText").value.toLowerCase();
-  var messageArray = userMessage.split(' ');
 
   return {
     translateToFrench: function(userMessage){
+      var userMessage = document.getElementById("translateText").value.toLowerCase();
+      var messageArray = userMessage.split(' ');
+
       for(var i=0; i<messageArray.length; i++) {
          for(var english in frenchLexicon) {
           if (messageArray[i] === english) {
@@ -19,6 +20,7 @@ var message = (function( ) {
           }
         }
       }
+      return messageArray.join(" ");
     }
   }
 })();
