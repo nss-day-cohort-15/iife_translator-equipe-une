@@ -22,8 +22,17 @@
 }
 
 #submit {
-  display: block;
-  margin: 20px auto;
+  margin: 20px 10px 10px 35%;
+}
+.button {
+  display: inline-block;
   font-size:1em;
   cursor: pointer;
+}
+
+#translatedText {
+  border: 1px #aaa solid;
+  min-height: 200px;
+  max-width: 600px;
+  margin: 30px auto;
 }

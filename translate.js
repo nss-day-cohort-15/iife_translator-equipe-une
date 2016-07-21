@@ -12,3 +12,9 @@ document.getElementById("submit").addEventListener("click", function(evt) {
     console.log("woo hoo")
   }
 });
+
+document.getElementById("readText").addEventListener("click", function (evt) {
+  var text = document.getElementById("translatedText");
+  var spokenText = text.innerHTML;
+  responsiveVoice.speak(spokenText);
+}

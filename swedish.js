@@ -10,7 +10,9 @@ message = (function(swedishMessage) {
 
   swedishMessage.translateToSwedish = function(userMessage){
     var userMessage = document.getElementById("translateText").value.toLowerCase();
-    var messageArray = userMessage.split(' ');
+    var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\!', '\\\,', '\\\.'];
+    separators.join('|');
+    var messageArray = userMessage.split(new RegExp(separators.join('|'), 'g'));
 
     for(var i=0; i<messageArray.length; i++) {
        for(var english in swedishLexicon) {
