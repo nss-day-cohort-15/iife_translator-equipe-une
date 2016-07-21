@@ -1,5 +1,6 @@
-message = (function(spanisMessage) {
-  var spanishLexicon = {
+
+message = (function(swedishMessage) {
+  var swedishLexicon = {
       "merry":"god",
       "christmas":"jul",
       "and":"och",
@@ -9,18 +10,19 @@ message = (function(spanisMessage) {
     }
   var userMessage = document.getElementById("translateText").value.toLowerCase();
   var messageArray = userMessage.split(' ');
-  spanishMessage.translateToSpanish = function(userMessage){
+  swedishMessage.translateToSwedish = function(userMessage){
     for(var i=0; i<messageArray.length; i++) {
-       for(var english in spanishLexicon) {
+       for(var english in swedishLexicon) {
         if (messageArray[i] === english) {
-          messageArray[i] = spanishLexicon[english];
+          messageArray[i] = swedishLexicon[english];
         }
       }
     }
   }
 
-  return spanishMessage;
+  return swedishMessage;
 
 })(message);
+
 
 
