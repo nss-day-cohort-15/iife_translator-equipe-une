@@ -1,0 +1,28 @@
+.title {
+  text-align: center;
+}
+
+.translateForm textarea{
+  display: block;
+  margin: 0 auto;
+  min-height: 200px;
+  min-width: 600px;
+  font-size: .8em;
+  resize: none;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+}
+
+.select input {
+  margin-right: 20px;
+}
+
+#submit {
+  display: block;
+  margin: 20px auto;
+  font-size:1em;
+  cursor: pointer;
+}
