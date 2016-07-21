@@ -14,7 +14,13 @@ document.getElementById("submit").addEventListener("click", function(evt) {
 });
 
 document.getElementById("readText").addEventListener("click", function (evt) {
-  var text = document.getElementById("translatedText");
-  var spokenText = text.innerHTML;
-  responsiveVoice.speak(spokenText);
-}
+  var spokenText = document.getElementById("translatedText").innerHTML;
+  if(document.getElementById('spanish').checked) {
+    responsiveVoice.speak(spokenText, "Spanish Female");
+  }else if(document.getElementById('french').checked) {
+    responsiveVoice.speak(spokenText, "French Female");
+  }else {
+    responsiveVoice.speak(spokenText, "Swedish Female");
+  }
+});
+
