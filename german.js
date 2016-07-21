@@ -1,32 +1,30 @@
-message = (function(spanishMessage) {
-  var spanishLexicon = {
-      "hello":"hola",
-      "merry":"feliz",
-      "christmas":"Navidad",
-      "and":"y",
-      "happy":"feliz",
-      "new":"nuevo",
-      "year":"año"
+message = (function(germanMessage) {
+  var germanLexicon = {
+      "hello":"hallo",
+      "merry":"fröhlich",
+      "christmas":"Weihnachten",
+      "and":"und",
+      "happy":"glücklich",
+      "new":"neu",
+      "year":"Jahr"
     }
 
-  spanishMessage.translateToSpanish = function(userMessage){
+  germanMessage.translateToGerman = function(userMessage){
     var userMessage = document.getElementById("translateText").value.toLowerCase();
     var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\!', '\\\,', '\\\.'];
       separators.join('|');
     var messageArray = userMessage.split(new RegExp(separators.join('|'), 'g'));
 
     for(var i=0; i<messageArray.length; i++) {
-       for(var english in spanishLexicon) {
+       for(var english in germanLexicon) {
         if (messageArray[i] === english) {
-          messageArray[i] = spanishLexicon[english];
+          messageArray[i] = germanLexicon[english];
         }
       }
     }
     return messageArray.join(" ");
   }
 
-  return spanishMessage;
+  return germanMessage;
 
 })(message);
-
-
