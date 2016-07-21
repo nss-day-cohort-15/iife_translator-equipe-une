@@ -6,14 +6,15 @@
 </head>
 <body>
 <header>
-  <h1 class="title"> Christmas Card Translator </h1>
+  <h1 class="text"> Christmas Card Translator </h1>
 </header>
 <section>
   <form action="" class="translateForm">
-    <textarea id="translateText" name="translateText" placeholder = "Write the text you would like to translate here..."></textarea> <br>
+    <textarea id="translateText" name="translateText" placeholder = "Write the text for your card here..."></textarea> <br>
+    <h4 class="text"> Select the language to which you would like your card to be translated </h4> <br>
     <div class="select">
     <label for="spanish"> Spanish: </label>
-    <input type="radio" name="language" id="spanish" value="spanish">
+    <input type="radio" name="language" id="spanish" value="spanish" checked>
     <label for="french"> French: </label>
     <input type="radio" name="language" id="french" value="french">
     <label for="swedish"> Swedish: </label>
@@ -23,5 +24,8 @@
   </form>
 </section>
 <script type="text/javascript" src="translate.js"></script>
+<script type="text/javascript" src="spanish.js"></script>
+<script type="text/javascript" src="french.js"></script>
+<script type="text/javascript" src="swedish.js"></script>
 </body>
 </html>
