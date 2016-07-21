@@ -7,10 +7,15 @@ message = (function(spanishMessage) {
       "new":"nuevo",
       "year":"año"
     }
-  var userMessage = document.getElementById("translateText").value;
+  var userMessage = document.getElementById("translateText").value.toLowerCase();
+  var messageArray = userMessage.split(' ');
   spanishMessage.translateToSpanish = function(userMessage){
-    for(var english in spanishLexicon) {
-      userMessage.replaceAll("/"+english+"/gi", spanishLexicon[english]);
+    for(var i=0; i<messageArray.length; i++) {
+       for(var english in spanishLexicon) {
+        if (messageArray[i] === english) {
+          messageArray[i] = spanishLexicon[english];
+        }
+      }
     }
   }
 
