@@ -1,4 +1,4 @@
-message = (function(swedishMessage) {
+var message = (function(swedishMessage) {
   var swedishLexicon = {
       "hello":"Hallå",
       "merry":"god",
@@ -27,7 +27,7 @@ message = (function(swedishMessage) {
 
  return swedishMessage;
 
-})(message);
+})(message || {});
 
 
 

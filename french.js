@@ -1,4 +1,4 @@
-var message = (function( ) {
+var message = (function(frenchMessage) {
   var frenchLexicon = {
       "hello":"Bonjour",
       "merry":"joyeux",
@@ -9,8 +9,7 @@ var message = (function( ) {
       "year":"an"
     }
 
-  return {
-    translateToFrench: function(userMessage){
+    frenchMessage.translateToFrench = function(userMessage){
       var userMessage = document.getElementById("translateText").value.toLowerCase();
       var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\!', '\\\,', '\\\.'];
       separators.join('|');
@@ -25,6 +24,7 @@ var message = (function( ) {
       }
       return messageArray.join(" ");
     }
-  }
-})();
+    return frenchMessage
+
+})(message || {});
 

@@ -1,4 +1,4 @@
-message = (function(spanishMessage) {
+var message = (function(spanishMessage) {
   var spanishLexicon = {
       "hello":"hola",
       "merry":"feliz",
@@ -27,6 +27,6 @@ message = (function(spanishMessage) {
 
   return spanishMessage;
 
-})(message);
+})(message || {});
 
 

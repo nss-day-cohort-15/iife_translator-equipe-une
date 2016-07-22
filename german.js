@@ -1,4 +1,4 @@
-message = (function(germanMessage) {
+var message = (function(germanMessage) {
   var germanLexicon = {
       "hello":"hallo",
       "merry":"fröhlich",
@@ -27,4 +27,4 @@ message = (function(germanMessage) {
 
   return germanMessage;
 
-})(message);
+})(message || {});
